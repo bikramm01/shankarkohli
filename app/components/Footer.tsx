@@ -25,7 +25,7 @@ export default function Footer() {
           </p>
 
           <p className="text-[#8A8A8A] text-sm mt-1">
-            Founder – Mark Real Estate
+            Founder – Mark Real Esstate
           </p>
 
           <p className="text-[#8A8A8A] text-sm mt-2">
