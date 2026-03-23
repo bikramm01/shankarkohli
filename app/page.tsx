@@ -67,7 +67,7 @@ const videos: string[] = [
   "/videos/testimonials/video1.mp4",
   "/videos/testimonials/video2.mp4",
   "/videos/testimonials/video3.mp4",
-  "/videos/testimonials/video4.mov",
+  "/videos/testimonials/video4.mp4",
   "/videos/testimonials/video5.mp4",
   "/videos/testimonials/video6.mp4",
 ];
@@ -592,7 +592,7 @@ const prevSlide = () => {
     <div className="relative">
 
       {/* SCROLL TRACK */}
-      <div className="flex gap-6 md:gap-10 w-max animate-scroll">
+      <div className="flex gap-6 md:gap-10 w-full animate-scroll">
 
         {[
           "/images/awards/1.jpg",

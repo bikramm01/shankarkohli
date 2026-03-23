@@ -77,11 +77,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${playfair.variable} ${inter.variable} bg-[#0D0D0D] text-white antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+  <body
+    className={`${playfair.variable} ${inter.variable} bg-[#0D0D0D] text-white antialiased overflow-x-hidden`}
+  >
+    <div className="w-full overflow-x-hidden">
+      {children}
+    </div>
+  </body>
+</html>
   );
 }

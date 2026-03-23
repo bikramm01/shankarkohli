@@ -137,20 +137,24 @@ export default function Header() {
         <div className="flex items-center gap-2 sm:gap-3 md:gap-4 flex-shrink-0">
 
           {/* CTA */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-            onClick={() => {
-              window.location.href =
-                "mailto:info@markrealesstate.com?subject=Consultation Request&body=Hello,%0D%0A%0D%0AI would like to book a consultation.";
-            }}
-            className="bg-[#C8A45A] text-black px-3 sm:px-4 md:px-6 py-2 text-[9px] sm:text-[10px] md:text-sm tracking-[0.12em] flex items-center gap-1.5 sm:gap-2 flex-shrink-0"
-          >
-            <Phone size={12} />
-            <span className="sm:hidden">Book</span>
-            <span className="hidden sm:inline">Book Consultation</span>
-          </motion.button>
-
+         <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.97 }}
+  onClick={() => {
+    window.location.href =
+      "mailto:info@markrealesstate.com?subject=Consultation Request&body=Hello,%0D%0A%0D%0AI would like to book a consultation.";
+  }}
+  className="bg-[#C8A45A] text-black 
+             px-3 sm:px-4 md:px-6 
+             py-2 
+             text-[10px] sm:text-xs md:text-sm 
+             tracking-[0.12em] 
+             flex items-center gap-2 
+             whitespace-nowrap"
+>
+  <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
+  <span>Book Consultation</span>
+</motion.button>
           {/* MENU */}
           <button
             onClick={() => setOpen(!open)}
