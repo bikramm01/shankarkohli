@@ -1,17 +1,36 @@
-- name: Push to bikram-ops repo
-  env:
-    GH_TOKEN: ${{ secrets.SK_GH }}
-  run: |
-    git config --global user.name "bikram-ops"
-    git config --global user.email "bikram@cleanomatics.com"
+name: Sync to bikram-ops
 
-    git clone https://x-access-token:${SK_GH}@github.com/bikram-ops/shankarkholi.git target
+on:
+  push:
+    branches:
+      - main
 
-    rm -rf target/*
-    cp -r * target/ || true
-    cp -r .[^.]* target/ || true
+jobs:
+  sync:
+    runs-on: ubuntu-latest
 
-    cd target
-    git add .
-    git commit -m "sync from bikramm01" || echo "No changes"
-    git push origin main --force
+    steps:
+      # 🔥 STEP 1: CHECKOUT (ADD HERE)
+      - name: Checkout source repo
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.SK_SOURCE }}
+
+      # 🔥 STEP 2: PUSH TO bikram-ops
+      - name: Push to bikram-ops repo
+        env:
+          GH_TOKEN: ${{ secrets.SK_GH }}
+        run: |
+          git config --global user.name "bikram-ops"
+          git config --global user.email "bikram@cleanomatics.com"
+
+          git clone https://x-access-token:${GH_TOKEN}@github.com/bikram-ops/shankarkholi.git target
+
+          rm -rf target/*
+          cp -r * target/ || true
+          cp -r .[^.]* target/ || true
+
+          cd target
+          git add .
+          git commit -m "sync from bikramm01" || echo "No changes"
+          git push origin main --force
