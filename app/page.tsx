@@ -415,124 +415,107 @@ const prevSlide = () => {
 
   </div>
 </section>
- {/* ═════════ STRATEGIC DEALS (PREMIUM + URGENCY + REAL DATA) ═════════ */}
 {/* ═════════ GLOBAL → INDIA → LAMBORGHINI (ELITE VERSION) ═════════ */}
-<section id="deals" className="py-24 md:py-36 px-5 bg-[#0f0f0f] relative overflow-hidden">
+{/* ═════════ CINEMATIC LAMBORGHINI SECTION ═════════ */}
+<section className="py-24 md:py-36 px-5 bg-[#0f0f0f] relative overflow-hidden">
 
-  {/* GOLD GLOW */}
+  {/* GLOW */}
   <div className="absolute inset-0 -z-10">
-    <div className="absolute w-[600px] h-[600px] bg-[#C8A45A]/10 blur-[160px] rounded-full left-[20%] top-[-120px]" />
+    <div className="absolute w-[600px] h-[600px] bg-[#C8A45A]/10 blur-[160px] rounded-full left-[10%] top-[-100px]" />
   </div>
 
-  <div className="max-w-6xl mx-auto">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-    {/* LABEL */}
-    <p className="text-[#C8A45A] text-[10px] tracking-[0.4em] mb-6">
-      GLOBAL TREND
-    </p>
+    {/* LEFT SIDE - TEXT */}
+    <div>
 
-    {/* HEADING */}
-    <Reveal>
-      <h2 className="text-2xl md:text-5xl text-[#E8E2D9] mb-6 max-w-4xl leading-tight">
-        Luxury Branded Residences Across the World
+      <p className="text-[#C8A45A] text-[10px] tracking-[0.4em] mb-6">
+        GLOBAL LAUNCH
+      </p>
+
+      <h2 className="text-3xl md:text-5xl text-[#E8E2D9] leading-tight mb-6">
+        The Next Global Luxury Drop
         <span className="block italic text-[#C8A45A] mt-2">
-          Sell Out Within Days
+          Now in Gurugram
         </span>
       </h2>
-    </Reveal>
 
-    {/* SUBTEXT */}
-    <Reveal>
-      <p className="text-[#8A8A8A] text-sm md:text-lg max-w-2xl mb-20 leading-relaxed">
-        From Miami to Dubai, global branded residences backed by iconic luxury brands consistently sell out within 24–72 hours - driven by prestige, limited inventory, and investor demand.
+      <p className="text-[#8A8A8A] text-sm md:text-base leading-relaxed mb-8 max-w-lg">
+        From Miami to Dubai, branded residences sell out within days.
+        Lamborghini Residences now bring that same global demand,
+        design, and exclusivity to India.
       </p>
-    </Reveal>
 
-    {/* MAIN FEATURE */}
-    <Reveal>
-      <div className="group relative bg-[#111] border border-[#1a1a1a] hover:border-[#C8A45A]/40 transition duration-500 overflow-hidden">
+      {/* PRICE */}
+      <p className="text-[#E8E2D9] text-lg mb-1">
+        ₹4.8Cr+ Entry (Pre-Launch)
+      </p>
 
-        {/* IMAGE */}
-        <div className="relative h-[600px] md:h-[620px] overflow-hidden">
+      <p className="text-[#666] text-xs mb-6">
+        ₹24,000/sq.ft • Inaugural Pricing
+      </p>
 
-          <Image
-            src="/images/lamborghini.png"
-            alt="Tonino Lamborghini Residences Gurugram"
-            fill
-            className="object-cover scale-105 transition duration-700 group-hover:scale-110"
-          />
+      {/* FOMO */}
+      <p className="text-[#C8A45A] text-xs tracking-[0.15em] mb-8">
+        Expected to sell out within days of launch
+      </p>
 
-          {/* STATUS */}
-          <div className="absolute top-6 left-6 z-10">
-            <span className="bg-[#C8A45A] text-black text-[11px] px-4 py-2 tracking-[0.2em]">
-              NOW LAUNCHING IN INDIA
-            </span>
-          </div>
+      {/* CTA */}
+      <button
+        onClick={() =>
+          document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })
+        }
+        className="bg-[#C8A45A] text-black px-8 py-3 text-sm tracking-[0.15em] hover:opacity-90 transition"
+      >
+        GET EARLY ALLOCATION
+      </button>
 
-          {/* OVERLAY */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
-        </div>
+    </div>
 
-        {/* CONTENT */}
-        <div className="p-6 md:p-12">
+    {/* RIGHT SIDE - IMAGE COLLAGE */}
+    <div className="relative h-[500px] md:h-[600px]">
 
-          <p className="text-[#C8A45A]/60 text-xs tracking-[0.25em] mb-3">
-            GURUGRAM • INDIA
-          </p>
-
-          <h3 className="text-[#E8E2D9] text-xl md:text-4xl mb-3">
-            Tonino Lamborghini Residences
-          </h3>
-
-          <p className="text-[#C8A45A] text-sm tracking-[0.15em] mb-5">
-            Italian Design • Ultra Luxury Living
-          </p>
-
-          {/* PRICE */}
-          <p className="text-[#E8E2D9] text-base md:text-lg mb-1">
-            ₹4.8Cr+ Entry (Pre-Launch)
-          </p>
-
-          <p className="text-[#666] text-xs mb-5">
-            ₹24,000/sq.ft • Inaugural Pricing
-          </p>
-
-          {/* DESC */}
-          <p className="text-[#8A8A8A] text-sm md:text-base leading-relaxed max-w-2xl">
-            Following the global success of Lamborghini-branded residences, this landmark development is set to redefine luxury living in Gurugram - combining bold Italian design with strong investment potential.
-          </p>
-
-          {/* FOMO LINE */}
-          <p className="text-[#C8A45A] text-[12px] mt-6 tracking-[0.15em]">
-            Expected to follow global sell-out trends within days of launch
-          </p>
-
-          {/* CTA */}
-          <div className="mt-10">
-            <button
-              onClick={() =>
-                document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="bg-[#C8A45A] text-black px-10 py-4 text-sm tracking-[0.15em] hover:opacity-90 transition"
-            >
-              GET EARLY ALLOCATION
-            </button>
-          </div>
-
-        </div>
-
+      {/* MAIN IMAGE */}
+      <div className="absolute w-[70%] h-[70%] top-0 right-0 overflow-hidden rounded-xl">
+        <Image
+          src="/images/lamborghini.png"
+          alt="Main"
+          fill
+          className="object-cover"
+        />
       </div>
-    </Reveal>
 
-    {/* FINAL LINE */}
-    <div className="text-center mt-16 max-w-xl mx-auto">
-      <p className="text-[#8A8A8A] text-sm leading-relaxed">
-        The real advantage is always in pre-launch access.  
-        Once released publicly, pricing and availability change rapidly.
-      </p>
+      {/* SMALL IMAGE 1 */}
+      <div className="absolute w-[45%] h-[40%] bottom-0 left-0 overflow-hidden rounded-xl border border-[#C8A45A]/20">
+        <Image
+          src="/images/lambo.png"
+          alt="Interior"
+          fill
+          className="object-cover"
+        />
+      </div>
+
+      {/* SMALL IMAGE 2 */}
+      <div className="absolute w-[35%] h-[30%] top-[50%] left-[10%] overflow-hidden rounded-xl border border-[#C8A45A]/20">
+        <Image
+          src="/images/lamborgini-lifestyle.png"
+          alt="Detail"
+          fill
+          className="object-cover"
+        />
+      </div>
+
     </div>
 
   </div>
+
+  {/* BOTTOM LINE */}
+  <div className="text-center mt-20 max-w-xl mx-auto">
+    <p className="text-[#8A8A8A] text-sm">
+      Pre-launch access is where real advantage is created.
+    </p>
+  </div>
+
 </section>
 
 {/* ═════════ TRACK RECORD (PREMIUM FIXED) ═════════ */}
