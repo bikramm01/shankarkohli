@@ -416,172 +416,220 @@ const prevSlide = () => {
   </div>
 </section>
  {/* ═════════ STRATEGIC DEALS (PREMIUM + URGENCY + REAL DATA) ═════════ */}
+{/* ═════════ GLOBAL → INDIA → LAMBORGHINI (ELITE VERSION) ═════════ */}
 <section id="deals" className="py-24 md:py-36 px-5 bg-[#0f0f0f] relative overflow-hidden">
 
   {/* GOLD GLOW */}
   <div className="absolute inset-0 -z-10">
-    <div className="absolute w-[500px] h-[500px] bg-[#C8A45A]/10 blur-[140px] rounded-full left-[20%] top-[-100px]" />
+    <div className="absolute w-[600px] h-[600px] bg-[#C8A45A]/10 blur-[160px] rounded-full left-[20%] top-[-120px]" />
   </div>
 
   <div className="max-w-6xl mx-auto">
 
     {/* LABEL */}
-    <p className="text-[#C8A45A] text-[10px] tracking-[0.35em] mb-5">
-      PRIVATE OPPORTUNITIES
+    <p className="text-[#C8A45A] text-[10px] tracking-[0.4em] mb-6">
+      GLOBAL TREND
     </p>
 
     {/* HEADING */}
     <Reveal>
-      <h2 className="text-2xl md:text-4xl text-[#E8E2D9] mb-16 max-w-2xl leading-snug">
-        Current Opportunities Available
-        <span className="block italic text-[#C8A45A] mt-1">
-          Through Private Access Only
+      <h2 className="text-2xl md:text-5xl text-[#E8E2D9] mb-6 max-w-4xl leading-tight">
+        Luxury Branded Residences Across the World
+        <span className="block italic text-[#C8A45A] mt-2">
+          Sell Out Within Days
         </span>
       </h2>
     </Reveal>
 
-    {/* GRID */}
-    <div className="grid md:grid-cols-3 gap-8">
-
-      {[
-        {
-          title: "Westin Residences",
-          highlight: "India’s First Marriott Branded Residences",
-          price: "₹5.2Cr Entry (Pre-Launch)",
-          subPrice: "₹25,750/sq.ft",
-          tag: "22% Appreciation",
-          status: "PRE-LAUNCH ADVANTAGE",
-          desc: "Entered during early phase with structured payment plan and strong capital appreciation.",
-          img: "/images/westin.jpg",
-        },
-        {
-          title: "Elie Saab Residences",
-          highlight: "Global Designer Branded Living",
-          price: "Limited Allocation",
-          subPrice: "",
-          tag: "High Demand Entry",
-          status: "OFF-MARKET ACCESS",
-          desc: "Secured exclusive inventory before public release.",
-          img: "/images/elie-saab.webp",
-        },
-        {
-          title: "Tonino Lamborghini Residences",
-          highlight: "Italian Design • Ultra Luxury Living",
-          price: "₹4.8Cr+ Entry (Pre-Launch)",
-          subPrice: "₹24,000/sq.ft",
-          tag: "Next Luxury Landmark",
-          status: "INAUGURAL PRICING",
-          desc: "Preferred allotment in pre-launch stage with strong appreciation potential.",
-          img: "/images/lamborghini.jpeg",
-        },
-      ].map((item, i) => (
-        <Reveal key={i}>
-          <div className="group relative bg-[#111] border border-[#1a1a1a] hover:border-[#C8A45A]/30 transition duration-500 overflow-hidden">
-
-            {/* IMAGE */}
-            <div className="relative h-[260px] md:h-[490px] overflow-hidden">
-
-              <Image
-                src={item.img}
-                alt={item.title}
-                fill
-                className="object-cover scale-105 transition duration-700 group-hover:scale-110"
-              />
-
-              {/* STATUS */}
-              <div className="absolute top-4 left-4 z-10">
-                <span className="bg-[#C8A45A] text-black text-[10px] px-3 py-1 tracking-[0.15em]">
-                  {item.status}
-                </span>
-              </div>
-
-              {/* CTA */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
-                <button
-                  onClick={() =>
-                    document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })
-                  }
-                  className="bg-[#C8A45A] text-black px-6 py-2 text-xs tracking-[0.1em]"
-                >
-                  GET ACCESS
-                </button>
-              </div>
-
-              {/* OVERLAY */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-            </div>
-
-            {/* CONTENT */}
-            <div className="p-6 md:p-7">
-
-              <span className="text-[#C8A45A]/40 text-xs mb-2 block">
-                0{i + 1}
-              </span>
-
-              <h3 className="text-[#E8E2D9] text-lg mb-1">
-                {item.title}
-              </h3>
-
-              <p className="text-[#C8A45A] text-xs tracking-[0.15em] mb-2">
-                {item.highlight}
-              </p>
-
-              {/* MAIN PRICE */}
-              <p className="text-[#E8E2D9] text-sm font-medium">
-                {item.price}
-              </p>
-
-              {/* SUB PRICE (hidden logic) */}
-              {item.subPrice && (
-                <p className="text-[#666] text-xs mb-2">
-                  {item.subPrice}
-                </p>
-              )}
-
-              <p className="text-[#C8A45A] text-sm mb-3 tracking-[0.12em]">
-                {item.tag}
-              </p>
-
-              <p className="text-[#8A8A8A] text-sm leading-relaxed">
-                {item.desc}
-              </p>
-
-              {/* URGENCY */}
-              <p className="text-[#C8A45A]/80 text-[11px] mt-3 tracking-[0.1em]">
-                Limited inventory • Private allocation only
-              </p>
-
-              <div className="w-8 h-[1px] bg-[#C8A45A] mt-5 group-hover:w-12 transition-all duration-300" />
-
-            </div>
-
-          </div>
-        </Reveal>
-      ))}
-
-    </div>
-
-    {/* FINAL CTA */}
-    <div className="text-center mt-20 max-w-xl mx-auto">
-      <p className="text-[#8A8A8A] text-sm mb-6 leading-relaxed">
-        Most premium units are allocated before public release.  
-        By the time they hit the market, the real advantage is already gone.
+    {/* SUBTEXT */}
+    <Reveal>
+      <p className="text-[#8A8A8A] text-sm md:text-lg max-w-2xl mb-20 leading-relaxed">
+        From Miami to Dubai, global branded residences backed by iconic luxury brands consistently sell out within 24–72 hours - driven by prestige, limited inventory, and investor demand.
       </p>
+    </Reveal>
 
-      <button
-        onClick={() =>
-          document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })
-        }
-        className="bg-[#C8A45A] text-black px-8 py-3 text-sm tracking-[0.1em] hover:opacity-90 transition"
-      >
-        Get Early Access
-      </button>
+    {/* MAIN FEATURE */}
+    <Reveal>
+      <div className="group relative bg-[#111] border border-[#1a1a1a] hover:border-[#C8A45A]/40 transition duration-500 overflow-hidden">
+
+        {/* IMAGE */}
+        <div className="relative h-[600px] md:h-[620px] overflow-hidden">
+
+          <Image
+            src="/images/lamborghini.png"
+            alt="Tonino Lamborghini Residences Gurugram"
+            fill
+            className="object-cover scale-105 transition duration-700 group-hover:scale-110"
+          />
+
+          {/* STATUS */}
+          <div className="absolute top-6 left-6 z-10">
+            <span className="bg-[#C8A45A] text-black text-[11px] px-4 py-2 tracking-[0.2em]">
+              NOW LAUNCHING IN INDIA
+            </span>
+          </div>
+
+          {/* OVERLAY */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
+        </div>
+
+        {/* CONTENT */}
+        <div className="p-6 md:p-12">
+
+          <p className="text-[#C8A45A]/60 text-xs tracking-[0.25em] mb-3">
+            GURUGRAM • INDIA
+          </p>
+
+          <h3 className="text-[#E8E2D9] text-xl md:text-4xl mb-3">
+            Tonino Lamborghini Residences
+          </h3>
+
+          <p className="text-[#C8A45A] text-sm tracking-[0.15em] mb-5">
+            Italian Design • Ultra Luxury Living
+          </p>
+
+          {/* PRICE */}
+          <p className="text-[#E8E2D9] text-base md:text-lg mb-1">
+            ₹4.8Cr+ Entry (Pre-Launch)
+          </p>
+
+          <p className="text-[#666] text-xs mb-5">
+            ₹24,000/sq.ft • Inaugural Pricing
+          </p>
+
+          {/* DESC */}
+          <p className="text-[#8A8A8A] text-sm md:text-base leading-relaxed max-w-2xl">
+            Following the global success of Lamborghini-branded residences, this landmark development is set to redefine luxury living in Gurugram - combining bold Italian design with strong investment potential.
+          </p>
+
+          {/* FOMO LINE */}
+          <p className="text-[#C8A45A] text-[12px] mt-6 tracking-[0.15em]">
+            Expected to follow global sell-out trends within days of launch
+          </p>
+
+          {/* CTA */}
+          <div className="mt-10">
+            <button
+              onClick={() =>
+                document.getElementById("final-cta")?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="bg-[#C8A45A] text-black px-10 py-4 text-sm tracking-[0.15em] hover:opacity-90 transition"
+            >
+              GET EARLY ALLOCATION
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </Reveal>
+
+    {/* FINAL LINE */}
+    <div className="text-center mt-16 max-w-xl mx-auto">
+      <p className="text-[#8A8A8A] text-sm leading-relaxed">
+        The real advantage is always in pre-launch access.  
+        Once released publicly, pricing and availability change rapidly.
+      </p>
     </div>
 
   </div>
 </section>
 
+{/* ═════════ TRACK RECORD (PREMIUM FIXED) ═════════ */}
+<section className="py-24 md:py-32 px-5 bg-[#0a0a0a]">
+
+  <div className="max-w-6xl mx-auto">
+
+    {/* LABEL */}
+    <p className="text-[#C8A45A] text-[10px] tracking-[0.35em] mb-5">
+      TRACK RECORD
+    </p>
+
+    {/* HEADING */}
+    <h2 className="text-2xl md:text-4xl text-[#E8E2D9] mb-16 max-w-2xl leading-snug">
+      Proven Access to
+      <span className="block italic text-[#C8A45A] mt-1">
+        High-Performing Luxury Assets
+      </span>
+    </h2>
+
+    {/* GRID */}
+    <div className="grid md:grid-cols-2 gap-8">
+
+      {/* WESTIN */}
+      <div className="group bg-[#111] border border-[#1a1a1a] hover:border-[#C8A45A]/30 transition duration-500 overflow-hidden">
+
+        {/* IMAGE */}
+        <div className="relative h-[300px] md:h-[360px] overflow-hidden">
+          <Image
+            src="/images/westin.jpg"
+            alt="Westin Residences"
+            fill
+            className="object-cover transition duration-700 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        </div>
+
+        {/* CONTENT */}
+        <div className="p-6">
+
+          <h3 className="text-[#E8E2D9] text-lg mb-2">
+            Westin Residences
+          </h3>
+
+          <p className="text-[#C8A45A] text-sm mb-3">
+            ₹6.5Cr → ₹7.22Cr
+          </p>
+
+          <p className="text-[#8A8A8A] text-sm leading-relaxed">
+            ~35% return on deployed capital through structured pre-launch entry.
+          </p>
+
+          <div className="w-8 h-[1px] bg-[#C8A45A] mt-5 group-hover:w-12 transition-all duration-300" />
+
+        </div>
+
+      </div>
+
+      {/* ELIE SAAB */}
+      <div className="group bg-[#111] border border-[#1a1a1a] hover:border-[#C8A45A]/30 transition duration-500 overflow-hidden">
+
+        {/* IMAGE */}
+        <div className="relative h-[300px] md:h-[360px] overflow-hidden">
+          <Image
+            src="/images/elie-saab.webp"
+            alt="Elie Saab Residences"
+            fill
+            className="object-cover transition duration-700 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        </div>
+
+        {/* CONTENT */}
+        <div className="p-6">
+
+          <h3 className="text-[#E8E2D9] text-lg mb-2">
+            Elie Saab Residences
+          </h3>
+
+          <p className="text-[#C8A45A] text-sm mb-3">
+            Off-Market Allocation
+          </p>
+
+          <p className="text-[#8A8A8A] text-sm leading-relaxed">
+            Secured exclusive inventory before public release with high demand positioning.
+          </p>
+
+          <div className="w-8 h-[1px] bg-[#C8A45A] mt-5 group-hover:w-12 transition-all duration-300" />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 {/* ═════════ RECOGNITION (AUTO SCROLL PREMIUM) ═════════ */}
 <section className="py-20 md:py-28 px-5 bg-[#0f0f0f] overflow-hidden">
   <div className="max-w-6xl mx-auto text-center">
