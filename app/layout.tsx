@@ -20,10 +20,8 @@ export const metadata: Metadata = {
       "Luxury Real Estate in Gurugram | Shankar Kohli – Branded Residences & HNI Investments",
     template: "%s | Shankar Kohli",
   },
-
   description:
     "Explore luxury real estate in Gurugram with Shankar Kohli. Specializing in branded residences, ultra-luxury apartments, and high-return property investments for HNI & NRI clients.",
-
   keywords: [
     "Luxury real estate Gurugram",
     "Branded residences Gurgaon",
@@ -31,10 +29,8 @@ export const metadata: Metadata = {
     "HNI property investment",
     "Shankar Kohli real estate",
   ],
-
   authors: [{ name: "Shankar Kohli" }],
   creator: "Shankar Kohli",
-
   metadataBase: new URL("https://shankarkohli.com"),
 
   openGraph: {
@@ -46,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Shankar Kohli",
     images: [
       {
-        url: "https://shankarkohli.com/images/og-image.jpg",
+        url: "https://shankarkohli.com/images/og-image.jpeg",
         width: 1200,
         height: 630,
         alt: "Luxury Real Estate in Gurugram",
@@ -61,11 +57,11 @@ export const metadata: Metadata = {
     title: "Luxury Real Estate in Gurugram | Shankar Kohli",
     description:
       "Discover luxury homes and branded residences in Gurugram.",
-    images: ["https://shankarkohli.com/images/og-image.jpg"],
+    images: ["https://shankarkohli.com/images/og-image.jpeg"],
   },
 
   robots: {
-    index: true, // ✅ visible on Google
+    index: true,
     follow: true,
   },
 
@@ -81,36 +77,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${playfair.variable} ${inter.variable} bg-[#0D0D0D] text-white antialiased overflow-x-hidden`}
-      >
+  <body
+    suppressHydrationWarning
+    className={`${playfair.variable} ${inter.variable} bg-[#0D0D0D] text-white antialiased overflow-x-hidden`}
+  >
         {/* 🔥 META PIXEL */}
-        <Script id="meta-pixel" strategy="afterInteractive">
-          {`
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
+        <Script
+  id="meta-pixel"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
 
-            fbq('init', '1595376804911221');
-            fbq('track', 'PageView');
-          `}
-        </Script>
-
-        {/* NOSCRIPT FALLBACK */}
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1595376804911221&ev=PageView&noscript=1"
-          />
-        </noscript>
-
+      fbq('init', '1595376804911221');
+      fbq('track', 'PageView');
+    `,
+  }}
+/>
         {/* 🔥 SEO SCHEMA */}
         <Script id="schema-person" type="application/ld+json">
           {JSON.stringify({
@@ -125,6 +115,17 @@ export default function RootLayout({
 
         {/* APP */}
         <div className="w-full overflow-x-hidden">{children}</div>
+
+        {/* ✅ NOSCRIPT (placed LAST to avoid hydration quirks) */}
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=1595376804911221&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
       </body>
     </html>
   );
