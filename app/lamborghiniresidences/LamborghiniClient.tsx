@@ -1051,7 +1051,7 @@ useEffect(() => {
         width={180}
         height={50}
         style={{
-          height: "50px",
+          height: "40px",
           width: "auto",
         }}
         priority
