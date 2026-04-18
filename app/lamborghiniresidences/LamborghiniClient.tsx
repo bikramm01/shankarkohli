@@ -269,19 +269,17 @@ heroFormNote: {
 
   // NAV
   nav: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    right: 0,
-    zIndex: 100,
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "30px 40px",
-    background: "linear-gradient(180deg, rgba(10,10,10,0.95) 0%, transparent 100%)",
-    
-    
-  },
+  position: "fixed",
+  top: 0,
+  left: 0,
+  right: 0,
+  zIndex: 100,
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: "16px 16px", // 🔥 reduce padding on mobile
+  background: "linear-gradient(180deg, rgba(10,10,10,0.95) 0%, transparent 100%)",
+},
   navLogo: {
     display: "flex",
     flexDirection: "column" as const,
@@ -1107,18 +1105,23 @@ useEffect(() => {
   )}
 
   {/* CTA BUTTON (ALWAYS VISIBLE — MOBILE PRIORITY) */}
-  <a
-    href="tel:+919811422554"
-    style={{
-      ...styles.navCta,
-      textDecoration: "none",
-      padding: isMobile ? "6px 12px" : "8px 16px",
-      fontSize: isMobile ? "12px" : "14px",
-      borderRadius: "4px",
-    }}
-  >
-    {isMobile ? "CALL NOW" : "+91 98114 22554"}
-  </a>
+ <a
+  href="tel:+919811422554"
+  style={{
+    ...styles.navCta,
+    textDecoration: "none",
+
+    padding: isMobile ? "6px 10px" : "10px 20px",
+    fontSize: isMobile ? "11px" : "14px",
+
+    borderRadius: "4px",
+
+    whiteSpace: "nowrap",   // ✅ FORCE SINGLE LINE
+    flexShrink: 0,          // ✅ PREVENT SQUEEZE
+  }}
+>
+  {isMobile ? "CALL" : "+91 98114 22554"}
+</a>
 </nav>
 {/* HERO */}
 <section
