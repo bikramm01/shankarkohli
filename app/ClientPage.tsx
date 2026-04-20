@@ -452,7 +452,7 @@ const prevSlide = () => {
 
       {/* PRICE */}
       <p className="text-[#E8E2D9] text-lg mb-1">
-        ₹4.8Cr+ Entry (Live Inventory)
+        ₹4.75Cr+ Entry (Live Inventory)
       </p>
 
       <p className="text-[#666] text-xs mb-6">
